@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { Link } from 'react-router-dom';
 export default function Navbar(props) {
   const handlered=()=>{
     props.showcolor('red');
@@ -22,12 +22,13 @@ const handlegreen=()=>{
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">{props.about}</a>
+                <Link className="nav-link" to="/About">{props.about}</Link>
+               
               </li>
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
@@ -37,7 +38,7 @@ const handlegreen=()=>{
                   <li><hr className="dropdown-divider" /></li>
                   <li><a className="dropdown-item" href="/">Something else here</a></li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
             <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
               <input type="radio" className="btn-check" onChange={handleblue} name="btnradio" id="btnradio1" autoComplete="off" />
