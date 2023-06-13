@@ -7,12 +7,12 @@ import { useEffect } from 'react';
 import TextForm from './components/TextForm';
 import About from './components/About';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 function App() {
   
 
@@ -84,16 +84,17 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
       <Navbar title="TextUtils" mode={mode} toggledark={toggleDark} showcolor={showcolor} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <Routes>   
-          <Route path="/about" element={<About />} />
-          <Route path="/" element={<TextForm  color2={color2} showAlert={showAlert} title="Enter Your Text Here" mode={mode}/>} />
-        </Routes>
+        {/* <Routes>    */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/" element={<TextForm  color2={color2} showAlert={showAlert} title="Enter Your Text Here" mode={mode}/>} /> */}
+          <TextForm  color2={color2} showAlert={showAlert} title="Enter Your Text Here" mode={mode}/>
+        {/* </Routes> */}
       </div>
-   </Router>
+   {/* </Router> */}
     </>
 
 
